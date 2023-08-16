@@ -13,5 +13,9 @@
     "cucumber-html-reporter": "^7.1.1",
     "cypress": "^12.17.3",
     "cypress-xpath": "^2.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/ui/steps/*-steps.js"
   }
 }

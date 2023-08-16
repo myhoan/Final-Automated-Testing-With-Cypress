@@ -30,5 +30,16 @@ module.exports = defineConfig({
     email: "nhitran2405@gmail.com",
     password: "minh123456789",
     token: "_wfh1yhQfBeDqEJg73Evk5LeY-G6v8i0n7bCCPXRxeY",
+    userProfile: {
+      username: "hoandinh2805",
+      first_name: "Hoan",
+      last_name: "Dinh Thi My",
+      email: "hoandinh2805@gmail.com",
+      url: "hoandinh2805.com",
+      location: "Ho Chi Minh",
+      bio: "No pain no gain",
+      instagram_username: "hoandinh",
+      twitter_username: "hoandinh",
+    },
   },
 });
