@@ -14,6 +14,10 @@ export const PHOTO_ENDPOINTS = {
   ENDPOINT_LIKE_A_PHOTO: (photoId) => `/photos/${photoId}/like`,
 };
 
+export const DOWNLOAD_ENPOINTS = {
+  ENDPOINT_DOWNLOAD_RANDOM_PHOTO: (photoId) => `/photos/${photoId}/download`,
+};
+
 export const RESPONSE_MESSAGE = {
   MSG_INVALID_DATA_TYPE_PRIVATE: "private is invalid",
   MSG_NON_EXISTED_ID: "Couldn't find Photo",

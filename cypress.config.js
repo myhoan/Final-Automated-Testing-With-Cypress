@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
+const { downloadFile } = require("cypress-downloadfile/lib/addPlugin");
 
 async function setupNodeEvents(on, config) {
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
@@ -11,6 +12,7 @@ async function setupNodeEvents(on, config) {
       plugins: [createEsbuildPlugin.default(config)],
     })
   );
+  on("task", { downloadFile });
   return config;
 }
 
@@ -29,12 +31,12 @@ module.exports = defineConfig({
     apiUrl: "https://api.unsplash.com",
     email: "nhitran2405@gmail.com",
     password: "minh123456789",
-    token: "_wfh1yhQfBeDqEJg73Evk5LeY-G6v8i0n7bCCPXRxeY",
+    token: "Vj1ROvfg8mXjDM5Pg_5WHGdn6ZzH3pODeEW8kQCSYEc",
     userProfile: {
       username: "hoandinh2805",
       first_name: "Hoan",
       last_name: "Dinh Thi My",
-      email: "hoandinh2805@gmail.com",
+      email: "nhitran2405@gmail.com",
       url: "hoandinh2805.com",
       location: "Ho Chi Minh",
       bio: "No pain no gain",

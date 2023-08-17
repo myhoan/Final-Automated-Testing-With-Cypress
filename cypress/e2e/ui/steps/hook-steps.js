@@ -1,6 +1,7 @@
 import { Before } from "@badeball/cypress-cucumber-preprocessor";
 import { PhotoHelpers } from "../../../utils/photo-helpers";
 import { UserHelpers } from "../../../utils/user-helpers";
+import { DownloadPhotoHelpers } from "../../../utils/download-helpers";
 
 Before({ tags: "@username", order: 1 }, function () {
   UserHelpers.getUserInfo(Cypress.env("token"));
@@ -51,4 +52,11 @@ Before({ tags: "@update_default_profile", order: 3 }, function () {
     }
   );
   UserHelpers.updateUserprofile(token, bodyUserDefaultProfile);
+});
+
+Before({ tags: "@download_photo", order: 4 }, function () {
+  let token = Cypress.env("token");
+  cy.fixture("photoData").then((item) =>
+    DownloadPhotoHelpers.downloadARandomPhoto(item.randomPhotoId, token)
+  );
 });

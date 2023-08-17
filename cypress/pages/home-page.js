@@ -1,6 +1,7 @@
 const URL_PHOTO_BY_ORDER = (order) =>
   `(//a[contains(@itemprop, 'contentUrl')])[${order}]`;
 
+const BTN_DOWNLOAD_PHOTO = "//header//a[@title='Download photo']";
 export const HomePage = {
   getRandomPhotos(number) {
     let photoIdList = [];
@@ -14,5 +15,8 @@ export const HomePage = {
         });
     }
     cy.wrap(photoIdList).as("photoIdList");
+  },
+  clickDownloadPhotoBtn() {
+    cy.xpath(BTN_DOWNLOAD_PHOTO).click();
   },
 };

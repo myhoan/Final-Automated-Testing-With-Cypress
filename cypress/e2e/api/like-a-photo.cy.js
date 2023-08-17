@@ -18,7 +18,6 @@ describe("Like a photo", () => {
       cy.get("@postResp").then((resp) => {
         cy.validateSchema(LikeAPhotoSchema, resp.body);
         expect(resp.status).eq(POST_STATUS.SUCCESS);
-        console.log(resp.body);
         expect(resp.body.photo.id).equal(this.randomPhotoId);
       });
     });

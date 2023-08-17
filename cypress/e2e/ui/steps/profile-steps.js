@@ -10,14 +10,12 @@ When("I click Edit tags link", () => {
 });
 
 When("I go to View Profile with new username", () => {
-  ProfilePage.navigateProfilePage(window.localStorage.getItem("username"));
+  ProfilePage.navigateProfilePage(Cypress.env("userProfile").username);
 });
 
 Then("I observe that it will take me to the Profile page", () => {
   cy.location().should((loc) => {
-    expect(loc.pathname).to.equal(
-      `/@${window.localStorage.getItem("username")}`
-    );
+    expect(loc.pathname).to.equal(`/@${Cypress.env("userProfile").username}`);
   });
 });
 
