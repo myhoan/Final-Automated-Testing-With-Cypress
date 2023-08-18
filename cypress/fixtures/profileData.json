@@ -1,0 +1,13 @@
+{
+  "defaultProfile": {
+    "username": "testSample",
+    "first_name": "Sample",
+    "last_name": "Test",
+    "email": "defaultSample@gmail.com",
+    "url": "defaultSample.com",
+    "location": "Ho Chi Minh",
+    "bio": "No pain no gain",
+    "instagram_username": "hoandinh",
+    "twitter_username": "hoandinh"
+  }
+}
